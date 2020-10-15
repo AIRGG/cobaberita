@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TES</title>
+</head>
+<body>
+	<div id="isi">
+		<h1>INI HEADER</h1>
+		<div style="width: auto; height: 90px;" v-html="toatas"></div>
+		<!-- <table>
+			<thead>
+				<tr>
+					<th>JUDUL</th>
+					<th>ISI</th>
+					<th>GAMBAR</th>
+					<th>URL</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>JUDUL</td>
+					<td>ISI</td>
+					<td>GAMBAR</td>
+					<td>URL</td>
+				</tr>
+			</tbody>
+		</table> -->
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+	<script src="listberita.js"></script>
+	<script type="text/javascript">
+		let appisi = new Vue({
+			el: '#isi',
+			data: {
+				toatas:'',
+			},
+			mounted() {
+				this.toatas = berita[0].isi
+				console.log(berita)
+			},
+			methods:{}
+		})
+	</script>
+</body>
+</html>
